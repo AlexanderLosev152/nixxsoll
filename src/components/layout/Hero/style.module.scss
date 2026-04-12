@@ -1,0 +1,29 @@
+@use '../../../scss/abstracts/media' as *;
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+
+	@include mobile {
+		flex-wrap: wrap;
+	}
+}
+
+.heroTitle {
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: clamp(2rem, 7vw, 5rem);
+	line-height: 106%;
+	background: linear-gradient(
+		140deg,
+		var(--dark-light) 0%,
+		var(--accent-dark) 42.4%,
+		var(--accent-color) 100%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	max-width: 30.625rem;
+}

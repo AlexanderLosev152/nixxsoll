@@ -1,0 +1,28 @@
+@use '../../../scss/abstracts/media' as *;
+
+.about {
+	display: flex;
+	gap: 2rem;
+	@include mobile {
+		flex-wrap: wrap;
+	}
+}
+
+.content {
+	display: grid;
+	gap: clamp(0.8rem, 3vw, 2rem);
+	p:nth-child(1) {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: clamp(1rem, 3vw, 2rem);
+		line-height: 119%;
+		color: var(--black);
+	}
+	p:nth-child(2) {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+		line-height: 140%;
+		color: var(--black);
+	}
+}

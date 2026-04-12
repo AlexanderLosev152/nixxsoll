@@ -1,0 +1,19 @@
+@use '../../../scss/abstracts/media' as *;
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: clamp(1rem, 3vw, 2.625rem);
+	margin-bottom: clamp(1rem, 5vw, 6.7rem);
+
+	@include laptop {
+		margin-top: clamp(1rem, 2vw, 2.625rem);
+		margin-bottom: clamp(1rem, 1vw, 6.7rem);
+	}
+
+	@include mobile {
+		margin-top: clamp(1rem, 3vw, 2.625rem);
+		margin-bottom: clamp(1rem, 5vw, 6.7rem);
+	}
+}

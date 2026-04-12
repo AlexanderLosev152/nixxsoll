@@ -1,0 +1,43 @@
+@use '../../../scss/abstracts/mixins' as *;
+@use '../../../scss/abstracts/media' as *;
+
+.menu {
+	display: flex;
+	align-items: center;
+}
+
+.link {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 0.875rem;
+	color: var(--black);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--radius-sm);
+	transition:
+		font-size 0.1s,
+		background 0.3s,
+		color 0.1s;
+	width: 9rem;
+	height: 3.125rem;
+
+	@include hover {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 1rem;
+		line-height: 1.3;
+		letter-spacing: 0.02em;
+		color: var(--white);
+		background: var(--accent-color);
+	}
+
+	@include tablet {
+		width: clamp(5rem, 5vw, 7rem);
+		height: 2.5rem;
+	}
+
+	@include mobile {
+		display: none;
+	}
+}

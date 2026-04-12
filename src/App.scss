@@ -1,0 +1,40 @@
+@use 'normalize.css';
+
+@use './scss/abstracts/animations';
+@use './scss/abstracts/functions';
+@use './scss/abstracts/fonts';
+@use './scss/abstracts/media';
+@use './scss/abstracts/mixins';
+@use './scss/abstracts/variables';
+
+@use './scss/base/reset';
+@use './scss/base/typography';
+@use './scss/base/container';
+
+body {
+	font-family: var(--font-family);
+}
+
+html {
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background: #f1f1f1;
+		border-radius: 6px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 6px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: linear-gradient(
+			140deg,
+			var(--dark-light) 0%,
+			var(--accent-dark) 42.4%,
+			var(--accent-color) 100%
+		);
+	}
+}
