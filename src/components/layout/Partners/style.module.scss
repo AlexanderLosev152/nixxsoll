@@ -1,0 +1,40 @@
+@use '../../../scss/abstracts/mixins' as *;
+@use '../../../scss/abstracts/media' as *;
+
+.partners {
+	padding: clamp(1rem, 3vw, 2.75rem);
+}
+
+.whiteTheme {
+	background: var(--white);
+
+	.image {
+		filter: brightness(0);
+	}
+}
+
+.blackTheme {
+	background: var(--black);
+}
+
+.items {
+	@include grid(13rem, 1fr);
+	align-items: center;
+	@include mobile {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 5.5rem;
+}
+
+.image {
+	width: 100%;
+	max-width: 14rem;
+	height: auto;
+	object-fit: contain;
+}

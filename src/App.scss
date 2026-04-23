@@ -38,3 +38,38 @@ html {
 		);
 	}
 }
+
+.swiper {
+	position: relative;
+	height: 29rem;
+}
+
+.swiper-slide {
+	max-height: 25rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	position: absolute;
+	display: grid;
+	place-items: center;
+	border-radius: 100%;
+	color: var(--white);
+	background: var(--accent-color);
+	box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.07);
+	width: 2.5rem;
+	height: 2.5rem;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.swiper-button-prev {
+	right: 4rem;
+	bottom: 0;
+	transform: rotate(-180deg);
+}
+
+.swiper-button-next {
+	right: 0;
+	bottom: 0;
+}
